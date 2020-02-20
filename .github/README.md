@@ -1,6 +1,6 @@
 # Docker Bitwarden running with auto generate/renew Let's Encrypt Certificate
 
-With this repo you will be able to set up the fantastic [Portainer](https://bitwarden.com/) as a container over SSL auto generated and auto renewed by our Web Proxy.
+With this repo you will be able to set up the fantastic [Bitwarden](https://bitwarden.com/) as a container over SSL auto generated and auto renewed by our Web Proxy.
 
 ![Bitwarden Enviornment](https://github.com/evertramos/images/blob/master/portainer.jpg)
 
