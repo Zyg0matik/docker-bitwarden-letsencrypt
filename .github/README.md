@@ -1,8 +1,8 @@
-# Docker Portainer running with auto generate/renew Let's Encrypt Certificate
+# Docker Bitwarden running with auto generate/renew Let's Encrypt Certificate
 
-With this repo you will be able to set up the fantastic [Portainer](https://portainer.io) as a container over SSL auto generated and auto renewed by our Web Proxy.
+With this repo you will be able to set up the fantastic [Bitwarden](https://bitwarden.com/) as a container over SSL auto generated and auto renewed by our Web Proxy.
 
-![Portainer Enviornment](https://github.com/evertramos/images/blob/master/portainer.jpg)
+![Bitwarden Enviornment](https://github.com/evertramos/images/blob/master/portainer.jpg)
 
 # Prerequisites
 
@@ -17,7 +17,7 @@ In order to use this compose file (docker-compose.yml) you must have:
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/evertramos/docker-portainer-letsencrypt.git
+git clone https://github.com/Zyg0matik/docker-bitwarden-letsencrypt.git
 ```
 
 2. Make a copy of our .env.sample and rename it to .env:
@@ -26,22 +26,22 @@ Update this file with your preferences.
 
 ```bash
 #
-# docker-portainer-letsencrypt
+# docker-Bitwarden-letsencrypt
 # 
-# Portainer configured to work along with our Web Proxy
+# Bitwarden configured to work along with our Web Proxy
 # https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion
 #
-# This is the .env file to set up your portainer enviornment
+# This is the .env file to set up your Bitwarden enviornment
 
 #
-# Container name for your Portainer
+# Container name for your Bitwarden
 #
-CONTAINER_NAME=portainer
+CONTAINER_NAME=bitwarden
 
 #
-# Path where your Portainer files will be located
+# Path where your Bitwarden files will be located
 #
-PORTAINER_DATA_PATH=/path/to/your/portainer/data
+BITWARDEN_DATA_PATH=/path/to/your/bitwarden/data
 
 #
 # Password for Admin user
@@ -51,12 +51,12 @@ ADMIN_PASSWORD=your_admin_password
 #
 # Your domain (or domains)
 #
-DOMAINS=domain.com,www.domain.com,portainer.domain.com
+DOMAINS=domain.com,www.domain.com,bitwarden.domain.com
 
 #
 # Main domain for SSL certificate
 #
-MAIN_DOMAIN=portainer.domain.com
+MAIN_DOMAIN=bitwarden.domain.com
 
 #
 # Your email for Let's Encrypt register
@@ -67,15 +67,15 @@ LETSENCRYPT_EMAIL=your_email@domain.com
 # Path to the certificates
 # If you use our webproxy should be:
 # /home/user/webproxy/data/certs
-PORTAINER_SSL_PATH=/path/to/your/certs
+BITWARDEN_SSL_PATH=/path/to/your/certs
 
 #
 # SSL Certificates previously generated
 # You may use below webproxy to generate your ssl certificate
 #(https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion)
 #
-PORTAINER_SSL_CERTIFICATE=/certs/$MAIN_DOMAIN.crt
-PORTAINER_SSL_KEY=/certs/$MAIN_DOMAIN.key
+BITWARDEN_SSL_CERTIFICATE=/certs/$MAIN_DOMAIN.crt
+BITWARDEN_SSL_KEY=/certs/$MAIN_DOMAIN.key
 
 #
 # Network name
@@ -106,5 +106,5 @@ Or you can simply start your compose enviornment:
 
 > Please keep in mind that when starting for the first time it may take a few moments (even a couple minutes) to get your Let's Encrypt certificates generated.
 
-### Any further Portainer configuration please check [Portainer Official Documentation](https://portainer.readthedocs.io/en/stable/index.html)
+### Any further Bitwarden configuration please check [BitwardenRs Documentation](https://github.com/dani-garcia/bitwarden_rs/wiki)
 
